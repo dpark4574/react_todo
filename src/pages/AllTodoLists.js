@@ -1,12 +1,30 @@
-import Todo from "../components/Todo";
+import TodoList from "../components/todo/TodoList";
+
+const DUMMY_DATA = [
+  {
+    id: "t1",
+    title: "First Todo List",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg",
+    address: "Meetupstreet 5, 12345 Meetup City",
+    description: "This is the first todolist.",
+  },
+  {
+    id: "t2",
+    title: "Second Todo List",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg",
+    address: "Meetupstreet 5, 12345 Meetup City",
+    description: "This is the second todo list",
+  },
+];
+
 function AllTodoLists() {
   return (
-    <div>
-      <h1>My Todos</h1>
-      <Todo text="CMSC330 Project 1" />
-      <Todo text="ENEE303 HW" />
-      <Todo text="ENEE303 Lecture Quiz 2" />
-    </div>
+    <section>
+      <h1>All Todos</h1>
+      <TodoList todos={DUMMY_DATA} />
+    </section>
   );
 }
 export default AllTodoLists;
